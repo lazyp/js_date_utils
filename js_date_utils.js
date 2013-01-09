@@ -18,10 +18,10 @@
 				s       = curDate.getSeconds();
 				//填充成两位
 				M       = (M >= 10 ? M : '0'+M);
-			    d       = (d >= 10 ? d : '0'+d);
-			    H       = (H >= 10 ? H : '0'+H);
-			    m       = (m >= 10 ? m : '0'+m);
-			    s       = (s >= 10 ? s : '0'+s);
+			   	d       = (d >= 10 ? d : '0'+d);
+			    	H       = (H >= 10 ? H : '0'+H);
+			    	m       = (m >= 10 ? m : '0'+m);
+			    	s       = (s >= 10 ? s : '0'+s);
 			    
 			if(typeof style == 'undefined' || style == ''){
 				style = 'y-M-d H:m:s';
@@ -132,12 +132,12 @@
 			}
 			
 			var metaIndexs       = [style.indexOf('y') , style.indexOf('M') , style.indexOf('d') , style.indexOf('H') , style.indexOf('m'),style.indexOf('s')],
-				pattern          = style.replace('y','([0-9]{4})').replace('M','([0-9]{2})').replace('d','([0-9]{2})').replace('H','([0-9]{2})')
-									 	.replace('m','([0-9]{2})').replace('s','([0-9]{2})').replace(/\s+/g,'\\s'),
-				patternRegExp    = new RegExp(pattern),
-				results       	 = dateTimeStr.match(patternRegExp),
-				perfectMetaIndex = [],
-				maxIndex         = 6;
+			    pattern          = style.replace('y','([0-9]{4})').replace('M','([0-9]{2})').replace('d','([0-9]{2})').replace('H','([0-9]{2})')
+						    .replace('m','([0-9]{2})').replace('s','([0-9]{2})').replace(/\s+/g,'\\s'),
+			    patternRegExp    = new RegExp(pattern),
+			    results       	 = dateTimeStr.match(patternRegExp),
+			    perfectMetaIndex = [],
+			    maxIndex         = 6;
 			
 			//计算年、月、日、时、分、秒对应的results索引
 			for(var i=5 ; i >= 0 ;--i){
