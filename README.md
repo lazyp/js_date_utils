@@ -17,6 +17,8 @@ m-分
 s-秒
 
 比如：y-M-d H:m:s 
+</pre>
+```java
 
 dateUtils.getCurrentDatetime(formatStyle);//获取当前时间，formatStyle需要格式化成的样式。
 
@@ -24,6 +26,6 @@ dateUtils.parseDatetimeFromString(datetimeStr,formatStyle);//将字符串日期�
 
 dateUtils.formatDate(datetime,formatStyle);//将long型日期格式化为指定格式的字符串
 
+```
 
-</pre>
 
