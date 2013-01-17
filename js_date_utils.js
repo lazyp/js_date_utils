@@ -155,6 +155,40 @@
 			
 			return this.getMilliseconds(results[perfectMetaIndex[0]], results[perfectMetaIndex[1]], results[perfectMetaIndex[2]],results[perfectMetaIndex[3]]
 					,results[perfectMetaIndex[4]] , results[perfectMetaIndex[5]]);
+		},
+		/**
+		 * @param longDate date.getTime()
+		 * @param filed 需要操作的域(y年;M月;d天;H时;m分;s秒)
+		 * @param value 需要改变的值,当为负数的时候，相当于减
+		 */
+		addOrMinusDate : function(longDate , filed , value){
+			var date = new Date();
+			if(longDate > 0){
+				date.setTime(longDate);
+			}
+			switch(filed){
+				case 'y' :
+					date.setFullYear(date.getFullYear()+value);
+					break;
+				case 'M' : 
+					date.setMonth(date.getMonth()+value);
+					break;
+				case 'd' :
+					date.setDate(date.getDate()+value);
+					break;
+				case 'H' :
+					date.setHours(date.getHours()+value);
+					break;
+				case 'm' :
+					date.setMinutes(date.getMinutes()+value);
+					break;
+				case 's' :
+					date.setMilliseconds(date.getMilliseconds()+value);
+					break;
+				default  :
+					break;
+			}
+			return date.getTime();
 		}
 	};
 
